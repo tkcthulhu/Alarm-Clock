@@ -32,9 +32,12 @@ Alarm clock project
 >>
 >>-Create a function to display the current time updating every second
 ```
+
 let hours = currentDate.getHours();
 let minutes = currentDate.getMinutes();
 let seconds = currentDate.getSeconds();
+
+setInterval(1000);
 ```
 >>-Create a function to check if currentTime === alarmTime
 >>
