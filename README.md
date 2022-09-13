@@ -5,7 +5,7 @@ Alarm clock project
 >*MVP*   
 >>-Create an element for the current time display
 >
->>-Create an element for alarm time input (use HTML datetime for a deep stretch)
+>>-Create an element for alarm time input (use HTML datetime for a nice deep stretch)
 >
 >>-Create an element to display active alarm
 
@@ -18,11 +18,22 @@ Alarm clock project
 >
 >>-Create a 12hr/24hr toggle
 >
->>-Make an analog clock option
+>>-Make an analog clock face
 >
 >>-Create a element to show a countdown to alarm
 
-CSS
+**CSS**
 
 
-JS
+**JS**
+
+>*MVP*
+>>-Create a function to get the current time
+>>
+>>-Create a function to display the current time updating every second
+>> ```let hours = currentDate.getHours();
+let minutes = currentDate.getMinutes();
+let seconds = currentDate.getSeconds();```
+>>-Create a function to check if currentTime === alarmTime
+>>
+>>-Create a JS input field for the alarm
