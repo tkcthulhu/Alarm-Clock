@@ -31,9 +31,11 @@ Alarm clock project
 >>-Create a function to get the current time
 >>
 >>-Create a function to display the current time updating every second
->> ```let hours = currentDate.getHours();
+```
+let hours = currentDate.getHours();
 let minutes = currentDate.getMinutes();
-let seconds = currentDate.getSeconds();```
+let seconds = currentDate.getSeconds();
+```
 >>-Create a function to check if currentTime === alarmTime
 >>
 >>-Create a JS input field for the alarm
