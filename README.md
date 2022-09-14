@@ -39,3 +39,5 @@ Alarm clock project
 >>-Build code to handle to alarm form
 >>
 >>-Create a function to reset alarm
+>>
+>>-Create a function to convert alarm input from string to numbers
