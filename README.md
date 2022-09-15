@@ -31,8 +31,19 @@ Alarm clock project
 >>-Create a function to get the current time
 >>
 >>-Create a function to display the current time updating every second
+>>>-Convert to String?
 >>
 >>-Create a function to trigger alarm if currentTime === alarmTime
+``` IF currentTime = alarmTime 
+    pop up message & play audio
+```
+```
+const alarm = (timesting) => {
+    if (alarmString === timeString) {
+        alert('It\'s yo ALARM') && alarmAudio.play();
+    }
+}
+```
 >>
 >>-Create a JS input field for the alarm
 >>
