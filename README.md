@@ -34,8 +34,9 @@ Alarm clock project
 >>>-Convert to String?
 >>
 >>-Create a function to trigger alarm if currentTime === alarmTime
-``` IF currentTime = alarmTime 
-    pop up message & play audio
+``` 
+IF currentTime = alarmTime 
+pop up message & play audio
 ```
 ```
 const alarm = (timesting) => {
