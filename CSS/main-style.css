@@ -1,1 +1,32 @@
+body {
+    background-color: gainsboro;
+    border-width: 10px;
+    border-style: double;
+    border-color: rgb(22, 25, 5);
+    padding: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    text-align: center;
+}
 
+#time {
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+#date {
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+button {
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#currentAlarm {
+    font-size: 18pt;
+    font-weight: bold;
+    padding-bottom: 20px;
+}

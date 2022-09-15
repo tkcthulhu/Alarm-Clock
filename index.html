@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
     <head>
-        <title>Clarm Alock</title>
-        <script defer src="main.js"></script>
-        <link rel="stylesheet" href="main-style.css">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/main-style.css">
+        <title>Alarm Clock</title>
+        <script defer src="JS/main.js"></script>
     </head>
     <body>
-        <div id="clock"
+        <div id="clock">
             <h1>CURRENT TIME</h1>
-            <div id="current-time"></div>"
+            <div id="time"></div>
+            <h1>CURRENT DATE</h1>
+            <div id="date"></div>
+            <h2>SET ALARM</h2>
+                <div id="currentAlarm"></div>
+                
+                <div id="alarm-input">
+                    <input type="time" id="alarm" name="alarm-set"min="00:00" max="12:59" required>
+                    <button id="setAlarm">SET ALARM</button>
+                    
+                </div>
+        </div>
     </body>
-        
-
 </html>
 
 
