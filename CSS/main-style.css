@@ -1,1 +1,10 @@
-
+body {
+    background-color: gainsboro;
+    border-width: 10px;
+    border-style: dashed double;
+    border-color: rgb(22, 25, 5);
+    padding: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    text-align: center;
+}
