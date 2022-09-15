@@ -17,6 +17,15 @@ DIV "clock"
 div "alarm time input"
 input form (minutes, hours, seconds, AM/PM) <button>SET ALARM</button>
 ```
+```
+use DIV alarm form
+use FORM element
+INPUT hours MIN 1 MAX 12
+INPUT minutes MIN 00 MAX 60
+INPUT seconds MIN 00 MAX 60
+INPUT AM/PM
+set alarm BUTTON
+```
 >>
 >>-Create an element to display active alarm
 ```
