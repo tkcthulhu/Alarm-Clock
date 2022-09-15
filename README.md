@@ -51,8 +51,10 @@ variable = [hours, minutes, seconds, AMPM] = [dateVar-getHours(), dateVar-getMin
 >>
 >>-Create a function to display the current time updating every second
 >>>-Convert to String?
+>>>-Minutes & seconds don't show a zero 
 ```
 getTimeString = (hours, minutes, seconds) FAT ARROW BOI 
+
     RETURN (`${hours}:${minutes}:${seconds}`);
 
 getDateString = (month, day, year) FAT ARROW BOI 

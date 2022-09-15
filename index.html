@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/main-style.css">
-        <title>Clarm Alock</title>
+        <title>Alarm Clock</title>
         <script defer src="JS/main.js"></script>
     </head>
     <body>
@@ -12,7 +12,42 @@
             <div id="time"></div>
             <h1>CURRENT DATE</h1>
             <div id="date"></div>
-        </div>   
+            <h2>SET ALARM</h2>
+                <div id="alarm-form">
+                    <form>
+                        <input
+                            type="number"
+                            name="hours"
+                            placeholder="00"
+                            min="01"
+                            max="60"
+                            required
+                        />
+                        <input
+                            type="number"
+                            name="minutes"
+                            placeholder="00"
+                            min="01"
+                            max="60"
+                            required
+                        />
+                        <input
+                            type="number"
+                            name="seconds"
+                            placeholder="00"
+                            min="00"
+                            max="60"
+                            required
+                        />
+                        <select name="AM/PM" required>
+                            <option value="" select disabled>AM/PM</option>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                        <button>SET ALARM</button>
+                    </form>
+                </div>
+        </div>
     </body>
         
 
