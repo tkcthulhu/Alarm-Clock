@@ -1,5 +1,5 @@
 
-const getTimeString = ( hours, minutes, seconds, AMPM ) => {
+const getTimeString = ( hours, minutes, seconds ) => {
         if (seconds < 10) {
             seconds = `0${seconds}`;
         }
@@ -9,7 +9,7 @@ const getTimeString = ( hours, minutes, seconds, AMPM ) => {
         if (hours < 10) {
             hours = `0${hours}`;
         }
-    return `${hours}:${minutes}:${seconds} ${AMPM}`;
+    return `${hours}:${minutes}:${seconds}`;
 };
 
 const getDateString = ( month, day, year ) => {
@@ -52,19 +52,6 @@ const getDateString = ( month, day, year ) => {
     return `${month} ${day}, ${year}`;
 };
 
-const checkTimeString = ( hours, minutes, seconds ) => {
-    if (seconds < 10) {
-        seconds = `0${seconds}`;
-    }
-    if (minutes < 10) {
-        minutes = `0${minutes}`;
-    }
-    if (hours < 10) {
-        hours = `0${hours}`;
-    }
-return `${hours}:${minutes}:${seconds}`;
-};
-
 const getAlarmString = (alarmTime) => {
     return `${alarmTime}:00`;
 }
@@ -80,25 +67,21 @@ const getDateTime = () => {
     let nowTime = document.getElementById("time");
     let currentDate = document.getElementById("date");
     const currentTime = new Date();
-    let hours = currentTime.getHours();
-    let minutes = currentTime.getMinutes();
-    let seconds = currentTime.getSeconds();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
     let month = currentTime.getMonth();
     let day = currentTime.getDate();
     let year = currentTime.getFullYear();
-    let AMPM = hours >= 12 ? "PM" : "AM";
-    if (hours > 12) {
-        hours = hours - 12;
-    };
     
-    const timeString = getTimeString( hours, minutes, seconds, AMPM );
+    const timeString = getTimeString( hours, minutes, seconds );
     const dateString = getDateString( month, day, year);
     nowTime.innerHTML = timeString;
     currentDate.innerHTML = dateString;
 }
 
 const checkAlarm = (hours, minutes, seconds, alarmTime) => {
-    const timeString = checkTimeString( hours, minutes, seconds );
+    const timeString = getTimeString( hours, minutes, seconds );
     const checkAlarmTime = getAlarmString(alarmTime);
     if (timeString === checkAlarmTime) {
         alert('It\'s yo ALARM');
@@ -107,8 +90,8 @@ const checkAlarm = (hours, minutes, seconds, alarmTime) => {
 
 getDateTime();
 setInterval(getDateTime, 1000);
+setInterval(checkAlarm, 1000);
 
 const alarmButton = document.getElementById("setAlarm");
 alarmButton.addEventListener("click", getAlarmTime);
 
-setInterval(checkAlarm, 1000);
