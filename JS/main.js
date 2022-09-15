@@ -52,27 +52,30 @@ const getDateString = ( month, day, year ) => {
     return `${month} ${day}, ${year}`;
 };
 
-const getAlarmString = ( alarmHours, alarmMinutes) => {
-    return `${alarmHours}:${alarmMinutes}:00`;
+const checkTimeString = ( hours, minutes, seconds ) => {
+    if (seconds < 10) {
+        seconds = `0${seconds}`;
+    }
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
+return `${hours}:${minutes}:${seconds}`;
+};
+
+const getAlarmString = (alarmTime) => {
+    return `${alarmTime}:00`;
 }
 
 const getAlarmTime = () => {
     const alarmTime = document.getElementById("alarm").value;
     let alarmDisplay = document.getElementById("currentAlarm");
-    let alarmHours = document.querySelector("#hour").value;
-    let alarmMinutes = document.querySelector("#minute").value;
-    const alarmString = getAlarmString( alarmHours, alarmMinutes );
+    const alarmString = getAlarmString(alarmTime.toString());
     alarmDisplay.innerHTML = alarmString;
-    alert(alarmHours, alarmMinutes);
 };
 
-/*const checkAlarm = (checkTimeString, alarmTime) => {
-    const checkAlarmTime = alarmTime.toString();
-    if (checkTimeString === checkAlarmTime) {
-        alert('It\'s yo ALARM');
-    };
-};
-*/
 const getDateTime = () => {
     let nowTime = document.getElementById("time");
     let currentDate = document.getElementById("date");
@@ -93,6 +96,14 @@ const getDateTime = () => {
     nowTime.innerHTML = timeString;
     currentDate.innerHTML = dateString;
 }
+
+const checkAlarm = (hours, minutes, seconds, alarmTime) => {
+    const timeString = checkTimeString( hours, minutes, seconds );
+    const checkAlarmTime = getAlarmString(alarmTime);
+    if (timeString === checkAlarmTime) {
+        alert('It\'s yo ALARM');
+    };
+};
 
 getDateTime();
 setInterval(getDateTime, 1000);
