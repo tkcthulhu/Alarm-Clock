@@ -73,8 +73,7 @@ const checkAlarm = (hours, minutes, seconds, alarmTime) => {
     const R2D2 = new Audio('sounds/R2D2.mp3');
     if (timeString === checkAlarmTime) {
         R2D2.play();
-        R2D2.loop = true;
-        alarmBanner.innerHTML = 'ALARM';
+        alarmBanner.innerHTML = '!!ALARM!!';
     };
 };
 
