@@ -69,8 +69,12 @@ const getAlarmTime = () => {
 const checkAlarm = (hours, minutes, seconds, alarmTime) => {
     const timeString = getTimeString( hours, minutes, seconds );
     const checkAlarmTime = getAlarmString(alarmTime);
+    let alarmBanner = document.getElementById("alarmBanner");
+    const R2D2 = new Audio('sounds/R2D2.mp3');
     if (timeString === checkAlarmTime) {
-        alert('It\'s yo ALARM');
+        R2D2.play();
+        R2D2.loop = true;
+        alarmBanner.innerHTML = 'ALARM';
     };
 };
 

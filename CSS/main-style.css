@@ -30,3 +30,9 @@ button {
     font-weight: bold;
     padding-bottom: 20px;
 }
+
+#alarmBanner {
+    font-size: 36pt;
+    font-weight: bold;
+    padding-top: 20px;
+}
