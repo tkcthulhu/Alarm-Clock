@@ -56,8 +56,6 @@ const getAlarmString = (alarmTime) => {
     return `${alarmTime}:00`;
 };
 
-const alarmTime = document.getElementById("alarm").value;
-
 const getAlarmTime = () => {
     const alarmTime = document.getElementById("alarm").value;
     let alarmDisplay = document.getElementById("currentAlarm");
