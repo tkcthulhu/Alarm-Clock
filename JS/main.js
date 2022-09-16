@@ -54,13 +54,24 @@ const getDateString = ( month, day, year ) => {
 
 const getAlarmString = (alarmTime) => {
     return `${alarmTime}:00`;
-}
+};
+
+const alarmTime = document.getElementById("alarm").value;
 
 const getAlarmTime = () => {
     const alarmTime = document.getElementById("alarm").value;
     let alarmDisplay = document.getElementById("currentAlarm");
     const alarmString = getAlarmString(alarmTime.toString());
     alarmDisplay.innerHTML = alarmString;
+};
+
+
+const checkAlarm = (hours, minutes, seconds, alarmTime) => {
+    const timeString = getTimeString( hours, minutes, seconds );
+    const checkAlarmTime = getAlarmString(alarmTime);
+    if (timeString === checkAlarmTime) {
+        alert('It\'s yo ALARM');
+    };
 };
 
 const getDateTime = () => {
@@ -78,19 +89,14 @@ const getDateTime = () => {
     const dateString = getDateString( month, day, year);
     nowTime.innerHTML = timeString;
     currentDate.innerHTML = dateString;
-}
 
-const checkAlarm = (hours, minutes, seconds, alarmTime) => {
-    const timeString = getTimeString( hours, minutes, seconds );
-    const checkAlarmTime = getAlarmString(alarmTime);
-    if (timeString === checkAlarmTime) {
-        alert('It\'s yo ALARM');
-    };
+    let alarmTime = document.getElementById("alarm").value;
+    checkAlarm(hours, minutes, seconds, alarmTime);
 };
+
 
 getDateTime();
 setInterval(getDateTime, 1000);
-setInterval(checkAlarm, 1000);
 
 const alarmButton = document.getElementById("setAlarm");
 alarmButton.addEventListener("click", getAlarmTime);
